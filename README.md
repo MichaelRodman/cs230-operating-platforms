@@ -1,23 +1,56 @@
-# CS 230 Operating Platforms – Draw It or Lose It Software Design Document
+# CS 230 – Operating Platforms (Software Design Document)
+
+This repository contains a portfolio artifact from **CS 230: Operating Platforms** at **Southern New Hampshire University (SNHU)**.
+
+The artifact is a **Software Design Document** for the “Draw It or Lose It” project. It focuses on translating requirements into a platform-aware design that supports scalability, reliability, security, and cross-platform deployment considerations.
+
+---
 
 ## Portfolio Artifact
-- **Software Design Document (DOCX):** [CS 230 Project Three Software Design.docx](docs/CS%20230%20Project%20Three%20Software%20Design.docx)
-- **Software Design Document (PDF):** [CS 230 Project Three Software Design.pdf](docs/CS%20230%20Project%20Three%20Software%20Design.pdf)
 
-## Client and Requirements Summary
-**The client** for this course was **The Gaming Room**, a company that wanted to expand their existing game, *Draw It or Lose It*, beyond Android to support additional operating platforms. The goal was to design a web-based architecture that could support multiple teams and players, manage game sessions reliably, and scale as usage increases. Key requirements included unique naming for games/teams, support for concurrent games, and a platform design that considers operating systems, memory and storage management, distributed systems/network communication, and security.
+- **Software Design Document (DOCX):** [CS_230_Project_Three_Software_Design.docx](docs/CS_230_Project_Three_Software_Design.docx)  
+- **Software Design Document (PDF):** [CS_230_Project_Three_Software_Design.pdf](docs/CS_230_Project_Three_Software_Design.pdf)
 
-## What I Did Particularly Well
-I did particularly well at organizing the design document in a way that directly ties technical decisions to the client’s needs. In the Recommendations section, I provided clear, actionable choices for operating platform, architecture, storage, memory management, distributed communication, and security controls, which makes the document usable as a blueprint for development and deployment.
+> The PDF is best for quick viewing in-browser. The DOCX is included as the editable source.
 
-## How the Design Document Helped When Developing Code
-Working through the design document helped clarify constraints and decisions before implementation. By documenting platform choices, scaling strategy, and how game state and assets should be handled, it reduced uncertainty and helped ensure the code design aligns with real-world deployment needs (for example, avoiding storing large assets in memory and designing stateless services that can scale horizontally).
+---
 
-## What I Would Revise and How I Would Improve It
-If I could revise one part of the document, I would expand the **System Architecture View** and include a simple diagram showing the n-tier layout (client → load balancer → application instances → database/cache → object storage/CDN). Adding a visual diagram would make the relationships between components and data flows easier to understand at a glance.
+## Project Summary (Client + Requirements)
 
-## How I Interpreted User Needs and Implemented Them Into the Design
-I interpreted the user’s needs as reliability, cross-platform access, and a smooth gameplay experience during real-time rounds. I translated those needs into design choices such as a server-authoritative web service, HTTPS-based communication, real-time update support (e.g., WebSockets), centralized state storage, and strong security practices. Considering user needs is critical because the “best” technical design is only successful if it supports usability, performance, and trust for the people playing the game.
+**Client:** The Gaming Room  
+**Product:** *Draw It or Lose It*  
+**Goal:** Expand an existing game to support additional operating platforms while maintaining a smooth experience for concurrent users.
 
-## My Approach to Designing Software and Future Strategies
-I approached the design by first identifying functional requirements (game rules, team/player management, unique naming) and then evaluating platform constraints and tradeoffs (operating systems, scalability, storage, memory, security). In the future, I would continue using a structured approach that includes: requirements analysis, architectural pattern selection (n-tier, stateless services), risk assessment (failure points, outages), and validation of design decisions against scalability and security needs.
+Key considerations addressed in the design:
+- Cross-platform support and deployment strategy
+- Scalability and concurrency for multiple players/sessions
+- Storage and memory management decisions
+- Security and distributed communication considerations
+- Architectural choices that support maintainability and growth
+
+---
+
+## Reflection
+
+### What I did particularly well
+I organized the design around real constraints and requirements, tying recommendations directly to the client’s needs (platform selection, architecture approach, storage strategy, and security controls). My intent was to make the document usable as a blueprint for implementation and deployment decisions.
+
+### How the design document helped guide development
+Writing the design document clarified tradeoffs early—especially around scaling, session management, and storage. Documenting these decisions reduces ambiguity later and helps align implementation with real-world deployment constraints.
+
+### What I would revise or improve
+If I revisited this project, I would expand the **system architecture view** and include a simple diagram showing how major components interact (client → load balancing → application instances → data/storage services). A visual would make the relationships and data flow easier to understand at a glance.
+
+### How I interpret user needs and turn them into design decisions
+I start by identifying what “success” looks like for the user and then translate those needs into clear requirements. From there, I evaluate platform constraints and tradeoffs (performance, reliability, security, scalability) and choose designs that best support the requirements.
+
+---
+
+## Repository Structure
+
+```text
+.
+├── README.md
+└── docs/
+    ├── CS_230_Project_Three_Software_Design.docx
+    └── CS_230_Project_Three_Software_Design.pdf
